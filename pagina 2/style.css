@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    background-clip: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #333;
+    line-height: 1.6;
+}
+/* encabezado */
+header {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px #0000004d;
+}
+/* menu de navegacion */
+nav {
+    background-color: #000000de;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #0084ff;
+}
+
+/* animacion de inicio */
+.todo {
+    animation: fadeIn 1.5s ease-in-out;
+    max-width: 2000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+/* imagenes */
+img{
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    margin-top: 15px;
+  }
+  
+img:hover {
+    transform: scale(1.1);
+  }
+/* contacto */
+.redes {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+.redes a {
+    margin: 0 10px;
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+.redes a:hover,
+.redes a:focus {
+    color: #005599;
+  }
+/*  */
+section {
+    padding: 30px 20px;
+    margin: 10px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    max-width: 1200px;
+}
+/* cartas de cada auto */
+.camionetas, .sedan, .super {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.camionetas div, .sedan div, .super div {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 1px 4px #001277c7;
+    text-align: center;
+    transition: transform 0.3s;
+}
+/* pie de pagina */
+footer {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+/* transcicion de inicio */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+/* media queries */
+@media (min-width: 1024px) {
+    nav {
+        gap: 30px;
+    }
+    section {
+        max-width: 900px;
+    }
+}
+
+/* Tablet 768px */
+@media (max-width: 1023px) and (min-width: 768px) {
+    nav {
+        justify-content: center;
+        gap: 25px;
+    }
+    section {
+        max-width: 700px;
+    }
+}
+
+/* Móvil 480px */
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    section {
+        max-width: 90%;
+        margin: 10px auto;
+        padding: 20px 10px;
+    }
+}
